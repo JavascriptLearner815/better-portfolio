@@ -1,0 +1,82 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--clr-primary: #ee6352;
+	--clr-body: #333;
+	--clr-bg: white;
+}
+
+body {
+	font-family: basic-sans, Arial, Helvetica, sans-serif;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.125em;
+	line-height: 1.6;
+	color: var(--clr-body, black);
+	background: var(--clr-bg, white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--clr-primary, #ee6352);
+}
+
+.content {
+	background: var(--clr-bg, white);
+	width: 50vw;
+	padding: 3em;
+	box-shadow: 0 0 3em rgba(0, 0, 0, .15);
+	margin: 5em 2em;
+}
+
+.title {
+	margin: 0 0 .5em;
+	font-weight: 900;
+	color: var(--clr-primary, #ee6352);
+	line-height: .8;
+}
+
+a {
+	color: var(--clr-primary, #ee6352);
+	text-decoration: none;
+}
+
+button {
+	background: var(--clr-primary, #ee6352);
+	font-size: 1em;
+	font-family: inherit;
+	border: 0;
+	padding: .5em 1.5em;
+	border-radius: 1.5em;
+}
+
+.style-two {
+	--clr-primary: yellow;
+	--clr-bg: rgb(108, 131, 194);
+	
+	background: var(--clr-bg, white);
+	color: white;
+}
+
+a:hover {
+	opacity: .7;
+}
+
+:focus:not(button:focus) {
+	outline: 4px solid var(--clr-primary, #ee6352);
+	outline-offset: 5px;
+}
+
+button:focus {
+	box-shadow:
+		0 0 0 5px var(--clr-bg, white),
+		0 0 0 10px var(--clr-primary, #ee6352)
+	;
+}
+
+::-moz-focus-inner {
+	border: 0;
+}
